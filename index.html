@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissão de Nota Fiscal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Emissão de Nota Fiscal de Serviços</h1>
+
+        <form id="escrituracao">
+            <div id="dadosPrestador" class="container">
+                <h2>Dados Prestador de Serviços</h2>
+
+                <label for="cnpjPrestador">CNPJ: </label>
+                <input type="number" id="cnpjPrestador">
+
+                <label for="inscricaoPrestador">Inscrição Municipal: </label>
+                <input type="number" id="inscricaoPrestador"><br>
+
+                <label for="nomePrestador">Nome/Razão Social: </label>
+                <input type="text" id="nomePrestador"><br>
+
+                <label for="enderecoPrestador">Endereço: </label>
+                <input type="text" id="enderecoPrestador"><br>
+
+                <label for="municipioPrestador">Município: </label>
+                <input type="text" id="municipioPrestador">
+
+                <label for="ufPrestador">UF:</label>
+                <input type="text">
+
+                <label for="emailPrestador">E-mail: </label>
+                <input type="email">
+            </div>
+
+            <div id="dadosTomador" class="container">
+                <h2>Dados Cliente</h2>
+
+                <label for="cnpjTomador">CNPJ: </label>
+                <input type="number">
+
+                <label for="inscricaoTomador">Inscrição Municipal: </label>
+                <input type="number"><br>
+
+                <label for="nomeTomador">Nome/Razão Social: </label>
+                <input type="text"><br>
+
+                <label for="enderecoTomador">Endereço: </label>
+                <input type="text"><br>
+
+                <label for="municipioTomador">Município: </label>
+                <input type="text">
+
+                <label for="ufTomador">UF:</label>
+                <input type="text">
+
+                <label for="emailTomador">E-mail: </label>
+                <input type="email">
+            </div>
+
+            <div id="dadosNfs" class="container">
+                <h2>Dados Nota Fiscal</h2>
+
+                <label for="valorNfs">Valor Nota Fiscal: </label>
+                <input type="number"><br>
+
+                <label for="atividadeNfs">Código Atividade: </label>
+                <input type="number"><br>
+
+                <label for="deducaoNfs">Dedução de valores (%): </label>
+                <input type="number" id="deducaoNfs"><br>
+
+                <label for="baseCalcNfs">Base Cálculo (%): </label>
+                <input type="number" id="baseCalcNfs"><br>
+
+                <label for="aliquotaNfs">Alíquota ISS(%):  </label>
+                <input type="text" id="aliquotaNfs"><br>
+            
+                <label for="descricaoNfs">Descrição dos serviços:</label>
+                <textarea id="descricaoNfs" class="descricaoNfs"></textarea>
+            </div>
+
+            <div class= "botoes">
+                <button>Emitir NFS</button>
+                <input type="reset">
+            </div>
+        </form>
+        
+
+
+    <div id="notaFiscal">
+        <h2>Prévia Nota Fiscal</h2>
+
+        <div class="container">
+            <h3>Dados Prestador</h3>
+            <p><strong>CNPJ:</strong><span></span id="prestadorCnpj"></p>
+            <p><strong>Inscrição Municipal:</strong><span id="prestadorInscricao"></span></p>
+            <p><strong>Razão Social:</strong><span id="prestadorRazao"></span></p>
+            <p><strong>Endereço:</strong><span id="prestadorEndereco"></span></p>
+            <p><strong>Município:</strong><span id="prestadorMunicipio"></span></p>
+            <p><strong>UF:</strong><span id="prestadorUf"></span></p>
+            <p><strong>E-mail:</strong><span id="prestadorEmail"></span></p>
+        </div>
+
+        <div class="container">
+            <h3>Dados Tomador</h3>
+            <p><strong>CNPJ:</strong><span id="tomadorCnpj"></span></p>
+            <p><strong>Inscrição Municipal:</strong><span id="tomadorInscricao"></span></p>
+            <p><strong>Razão Social:</strong><span id="tomadorRazao"></span></p>
+            <p><strong>Endereço:</strong><span id="tomadorEndereco"></span></p>
+            <p><strong>Município:</strong><span id="tomadorMunicipio"></span></p>
+            <p><strong>UF:</strong><span id="tomadorUf"></span></p>
+            <p><strong>E-mail:</strong><span id="prestadorEmail"></span></p>
+        </div>
+
+        <div class="container">
+            <h3>Descrição Serviços</h3>
+            <p><strong></strong><span id="servicosDesc"></span></p>
+
+            <h3>Dados Nota Fiscal</h3>
+            <p><strong>Valor Total:</strong><span id="total"></span></p>
+            <p><strong>Valor da nota:</strong><span id="notaValor"></span></p>
+            <p><strong>Valor Deduções:</strong><span id="deducoesValor"></span></p>
+            <p><strong>Base Cálculo:</strong><span id="calculoBase"></span></p>
+            <p><strong>Alíquota:</strong><span id="issAliquota"></span></p>
+            <p><strong>Valor ISS:</strong><span id="issValor"></span></p>
+            
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
