@@ -29,50 +29,50 @@
                 <input type="text" id="municipioPrestador">
 
                 <label for="ufPrestador">UF:</label>
-                <input type="text">
+                <input type="text" id="ufPrestador">
 
                 <label for="emailPrestador">E-mail: </label>
-                <input type="email">
+                <input type="email" id="emailPrestador">
             </div>
 
             <div id="dadosTomador" class="container">
                 <h2>Dados Cliente</h2>
 
                 <label for="cnpjTomador">CNPJ: </label>
-                <input type="number">
+                <input type="number" id="cnpjTomador">
 
                 <label for="inscricaoTomador">Inscrição Municipal: </label>
-                <input type="number"><br>
+                <input type="number" id="inscricaoTomador"><br>
 
                 <label for="nomeTomador">Nome/Razão Social: </label>
-                <input type="text"><br>
+                <input type="text" id="nomeTomador"><br>
 
                 <label for="enderecoTomador">Endereço: </label>
-                <input type="text"><br>
+                <input type="text" id="enderecoTomador"><br>
 
                 <label for="municipioTomador">Município: </label>
-                <input type="text">
+                <input type="text" id="municipioTomador">
 
                 <label for="ufTomador">UF:</label>
-                <input type="text">
+                <input type="text" id="ufTomador">
 
                 <label for="emailTomador">E-mail: </label>
-                <input type="email">
+                <input type="email" id="emailTomador">
             </div>
 
             <div id="dadosNfs" class="container">
                 <h2>Dados Nota Fiscal</h2>
 
                 <label for="valorNfs">Valor Nota Fiscal: </label>
-                <input type="number"><br>
+                <input type="number" id="valorNfs"><br>
 
                 <label for="atividadeNfs">Código Atividade: </label>
-                <input type="number"><br>
+                <input type="number" id="atividadesNfs"><br>
 
                 <label for="deducaoNfs">Dedução de valores (%): </label>
                 <input type="number" id="deducaoNfs"><br>
 
-                <label for="baseCalcNfs">Base Cálculo (%): </label>
+                <label for="baseCalcNfs">Base Cálculo: </label>
                 <input type="number" id="baseCalcNfs"><br>
 
                 <label for="aliquotaNfs">Alíquota ISS(%):  </label>
@@ -83,7 +83,7 @@
             </div>
 
             <div class= "botoes">
-                <button>Emitir NFS</button>
+                <button type="button" onclick="emitirNotaFiscal()">Emitir NFS</button>
                 <input type="reset">
             </div>
         </form>
@@ -112,7 +112,7 @@
             <p><strong>Endereço:</strong><span id="tomadorEndereco"></span></p>
             <p><strong>Município:</strong><span id="tomadorMunicipio"></span></p>
             <p><strong>UF:</strong><span id="tomadorUf"></span></p>
-            <p><strong>E-mail:</strong><span id="prestadorEmail"></span></p>
+            <p><strong>E-mail:</strong><span id="tomadorEmail"></span></p>
         </div>
 
         <div class="container">
@@ -120,7 +120,7 @@
             <p><strong></strong><span id="servicosDesc"></span></p>
 
             <h3>Dados Nota Fiscal</h3>
-            <p><strong>Valor Total:</strong><span id="total"></span></p>
+            <p><strong>Valor Total:</strong><span id="totalValor"></span></p>
             <p><strong>Valor da nota:</strong><span id="notaValor"></span></p>
             <p><strong>Valor Deduções:</strong><span id="deducoesValor"></span></p>
             <p><strong>Base Cálculo:</strong><span id="calculoBase"></span></p>
